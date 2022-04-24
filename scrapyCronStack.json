@@ -1,0 +1,37 @@
+{
+    "Description": "Template for scrapy cron jobs",
+    "Parameters": {
+      "cronExpression": { "Type": "String" },
+      "jsonInput": { "Type": "String" },
+      "description": {
+        "Type": "String",
+        "Default": "Invokes function to submit scraping jobs to AWS Batch"
+      }
+    },
+    "Resources": {
+      "scrapyCron": {
+        "Type": "AWS::Events::Rule",
+        "Properties": {
+          "Description": { "Ref": "description" },
+          "State": "ENABLED",
+          "ScheduleExpression": { "Ref": "cronExpression" },
+          "Targets": [
+            {
+              "Arn": "arn:aws:lambda:eu-central-1:189416701607:function:batch-submit-dev-countySubmit",
+              "Input": { "Ref": "jsonInput" },
+              "Id": "batchSubmitTarget"
+            }
+          ]
+        }
+      },
+      "scrapyCronPermissions": {
+        "Type": "AWS::Lambda::Permission",
+        "Properties": {
+          "FunctionName": "batch-submit-dev-countySubmit",
+          "Action": "lambda:InvokeFunction",
+          "Principal": "events.amazonaws.com",
+          "SourceArn": { "Fn::GetAtt": ["scrapyCron", "Arn"] }
+        }
+      }
+    }
+}

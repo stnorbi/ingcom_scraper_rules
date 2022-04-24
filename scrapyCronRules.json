@@ -1,0 +1,28 @@
+
+{   "Description": "Root stack template for scraper cron jobs",
+    "Capabilities":["CAPABILITY_NAMED_IAM","CAPABILITY_AUTO_EXPAND"],
+    "Resources": {
+      "group1a": {
+        "Type": "AWS::CloudFormation::Stack",
+        "Properties": {
+          "TemplateURL": "./scrapyCronStack.json",
+          "Parameters": {
+            "description": "group 1a cron(0 10 2/2 * ? *)",
+            "cronExpression": "cron(0 10 2/2 * ? *)",
+            "jsonInput": "{\"county\":[\"bekes\",\"heves\",\"baranya\",\"vas\",\"somogy\"],\"property_type\":[\"haz\",\"lakas\",\"telek\",\"garazs\"]}"
+          }
+        }
+      },
+      "group2a": {
+        "Type": "AWS::CloudFormation::Stack",
+        "Properties": {
+          "TemplateURL": "./scrapyCronStack.json",
+          "Parameters": {
+            "description": "group 2a cron(0 8 2/2 * ? *)",
+            "cronExpression": "cron(0 8 2/2 * ? *)",
+            "jsonInput": "{\"county\":[\"veszprem\",\"csongrad\",\"zala\",\"fejer\"],\"property_type\":[\"haz\",\"lakas\",\"telek\",\"garazs\"]}"
+          }
+        }
+      }
+    }
+}
