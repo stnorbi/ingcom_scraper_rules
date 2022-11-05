@@ -17,7 +17,7 @@
         "ScheduleExpression": { "Ref": "cronExpression" },
         "Targets": [
           {
-            "Arn": "arn:aws:lambda:eu-central-1:189416701607:function:batch-submit-dev-stateSubmit",
+            "Arn": "arn:aws:lambda:eu-central-1:189416701607:function:batch-submit-dev-ingcomSubmit",
             "Input": { "Ref": "jsonInput" },
             "Id": "batchSubmitTarget"
           }
@@ -27,7 +27,7 @@
     "scraperCronPermissions": {
       "Type": "AWS::Lambda::Permission",
       "Properties": {
-        "FunctionName": "batch-submit-dev-stateSubmit",
+        "FunctionName": "batch-submit-dev-ingcomSubmit",
         "Action": "lambda:InvokeFunction",
         "Principal": "events.amazonaws.com",
         "SourceArn": { "Fn::GetAtt": ["scraperCron", "Arn"] }

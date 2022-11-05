@@ -8,7 +8,7 @@
         "Parameters": {
           "description": "group 1a cron(0 10 2/2 * ? *)",
           "cronExpression": "cron(0 10 2/2 * ? *)",
-          "jsonInput": "{\"states\":[\"New York\",\"Oregon\",\"Utah\",\"Ohio\",\"Arizona\",\"Nevada\",\"Colorado\",\"Florida\",\"California\"],\"makes\":[\"bmw\",\"mercedes\",\"porsche\",\"honda\",\"ford\"]}"
+          "jsonInput": "{\"city_unic\":[\"oroshaza\",\"gyor\"],\"deal\":[\"kiado\"],\"property_type\":[\"lakas\"]}"
         }
       }
     },
@@ -17,53 +17,9 @@
       "Properties": {
         "TemplateURL": "./scrapyCronStack.json",
         "Parameters": {
-          "description": "group 1b cron(0 8 2/2 * ? *)",
-          "cronExpression": "cron(0 8 2/2 * ? *)",
-          "jsonInput": "{\"states\":[\"New York\",\"Oregon\",\"Utah\",\"Ohio\",\"Arizona\",\"Nevada\",\"Colorado\",\"Florida\",\"California\"],\"makes\":[\"toyota\",\"audi\",\"mazda\",\"subaru\"]}"
-        }
-      }
-    },
-    "group2a": {
-      "Type": "AWS::CloudFormation::Stack",
-      "Properties": {
-        "TemplateURL": "./scrapyCronStack.json",
-        "Parameters": {
-          "description": "group 2a cron(0 10 1/2 * ? *)",
-          "cronExpression": "cron(0 10 1/2 * ? *)",
-          "jsonInput": "{\"states\":[\"New Mexico\",\"Texas\",\"Illinois\",\"Connecticut\",\"Georgia\",\"Pennsylvania\"],\"makes\":[\"bmw\",\"mercedes\",\"porsche\",\"honda\",\"ford\"]}"
-        }
-      }
-    },
-    "group2b": {
-      "Type": "AWS::CloudFormation::Stack",
-      "Properties": {
-        "TemplateURL": "./scrapyCronStack.json",
-        "Parameters": {
-          "description": "group 2b cron(0 8 1/2 * ? *)",
-          "cronExpression": "cron(0 8 1/2 * ? *)",
-          "jsonInput": "{\"states\":[\"New Mexico\",\"Texas\",\"Illinois\",\"Connecticut\",\"Georgia\",\"Pennsylvania\"],\"makes\":[\"toyota\",\"audi\",\"mazda\",\"subaru\"]}"
-        }
-      }
-    },
-    "generic1a": {
-      "Type": "AWS::CloudFormation::Stack",
-      "Properties": {
-        "TemplateURL": "./scrapyCronStack.json",
-        "Parameters": {
-          "description": "Generic make_model scraper group 1a cron(0 6 1,15 * ? *)",
-          "cronExpression": "cron(0 6 1,15 * ? *)",
-          "jsonInput": "{\"states\":[\"Arizona\",\"Nevada\",\"Colorado\",\"Florida\",\"California\",\"Michigan\"],\"makes\":[\"generic\"]}"
-        }
-      }
-    },
-    "generic3a": {
-      "Type": "AWS::CloudFormation::Stack",
-      "Properties": {
-        "TemplateURL": "./scrapyCronStack.json",
-        "Parameters": {
-          "description": "Group 3a cron(0 12 1/2 * ? *)",
-          "cronExpression": "cron(0 12 1/2 * ? *)",
-          "jsonInput": "{\"states\":[\"New York\",\"Oregon\",\"Utah\",\"Ohio\",\"Arizona\",\"Nevada\",\"Colorado\",\"Florida\",\"California\"],\"makes\":[\"chevy\",\"jeep\",\"hyundai\"]}"
+          "description": "group 1a cron(0 10 2/2 * ? *)",
+          "cronExpression": "cron(0 10 2/2 * ? *)",
+          "jsonInput": "{\"city_unic\":[\"oroshaza\",\"gyor\"],\"deal\":[\"kiado\"],\"property_type\":[\"elado\"]}"
         }
       }
     }
