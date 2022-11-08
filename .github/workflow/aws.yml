@@ -52,5 +52,7 @@ jobs:
 
     # Deploy to AWS CloudFormation
     - name: Deploy to AWS CloudFormation
-      uses: aws-actions/aws-cloudformation-github-deploy@master
+      run: . ./scripts/validate_deploy.sh
+      #uses: aws-actions/aws-cloudformation-github-deploy@master
+
 
