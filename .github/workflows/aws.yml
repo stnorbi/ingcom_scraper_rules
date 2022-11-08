@@ -33,7 +33,7 @@ on:
 permissions:
   contents: read
 
-jobs:
+jobs: 
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
