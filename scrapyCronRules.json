@@ -8,7 +8,7 @@
         "Parameters": {
           "description": "group 1a cron(0 10 2/2 * ? *)",
           "cronExpression": "cron(0 10 2/2 * ? *)",
-          "jsonInput": "{\"city_unic\":[\"oroshaza\",\"gyor\"],\"deal\":[\"kiado\"],\"property_type\":[\"lakas\"]}"
+          "jsonInput": "{\"city_unic\":[\"oroshaza\",\"gyor\",\"szeged\"],\"deal\":[\"kiado\"],\"property_type\":[\"lakas\"]}"
         }
       }
     },
@@ -19,7 +19,7 @@
         "Parameters": {
           "description": "group 1a cron(0 10 2/2 * ? *)",
           "cronExpression": "cron(0 10 2/2 * ? *)",
-          "jsonInput": "{\"city_unic\":[\"oroshaza\",\"gyor\"],\"deal\":[\"kiado\"],\"property_type\":[\"elado\"]}"
+          "jsonInput": "{\"city_unic\":[\"oroshaza\",\"gyor\",\"szeged\"],\"deal\":[\"elado\"],\"property_type\":[\"haz\"]}"
         }
       }
     }
